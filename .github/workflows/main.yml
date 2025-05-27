@@ -13,7 +13,7 @@ jobs:
       - name: Aqua Scanner - Trivy FS
         uses: docker://aquasec/aqua-scanner
         with:
-          args: trivy fs --scanners config,vuln,secret .
+          args: trivy fs --sast --scanners config,vuln,secret .
         env:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
