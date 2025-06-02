@@ -1,6 +1,8 @@
 name: CI - Multi App Aqua Scan
 
-on: [push, pull_request]
+#on: [push, pull_request]
+on:
+  workflow_dispatch: 
 
 jobs:
   scan:
